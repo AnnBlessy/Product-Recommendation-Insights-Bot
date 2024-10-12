@@ -53,6 +53,7 @@ def build_faiss_index(embeddings):
 ### Step 5: Query and Retrieve Relevant Text
 Now, set up a function to retrieve the most relevant texts based on user queries.
 
+
 ```
 def retrieve_similar_sentences(query, model, index, text_chunks, threshold=0.5):
     query_embedding = model.encode([query], convert_to_numpy=True)  # Create an embedding for the query
